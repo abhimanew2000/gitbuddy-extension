@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>GitBuddy Settings</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"] {
+      width: 300px;
+    }
+    .save-status {
+      margin-top: 10px;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>GitBuddy Settings</h2>
+  
+  <label for="commitTypes">Allowed Commit Types (comma-separated)</label>
+  <input type="text" id="commitTypes" placeholder="feat,fix,docs,style,refactor,test,chore" />
+
+  <label for="minDescriptionLength">Minimum Description Length</label>
+  <input type="number" id="minDescriptionLength" placeholder="10" min="1" />
+
+  <button id="saveBtn">Save Settings</button>
+  <div id="saveStatus" class="save-status"></div>
+
+  <script src="options.js"></script>
+</body>
+</html>
